@@ -14,17 +14,20 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/v1_keypad.kl:system/usr/keylayout/v1_keypad.kl \
+    $(LOCAL_PATH)/configs/mms100s_ts.kl:system/usr/keylayout/mms100s_ts.kl
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/media_profiles.xml:system/etc/media_profiles.xml
 
 # Wifi
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/prebuilt/librasdioif.ko:system/lib/modules/librasdioif.ko \
     $(LOCAL_PATH)/prebuilt/wlan.ko:system/lib/modules/wlan.ko
 
 # HW HALS
 PRODUCT_PACKAGES += \
-    gps.e410 \
-    power.e410
+    gps.e410
 
 PRODUCT_NAME := full_e410
 PRODUCT_DEVICE := e410
 PRODUCT_MODEL := LG-E410
+
