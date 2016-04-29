@@ -17,3 +17,10 @@ on boot
     chown system system /sys/class/input/input3/eeprom_writing
     chown system system /sys/class/input/input3/softreset
     chown system system /sys/devices/platform/i2c-gpio.4/i2c-4/4-0044/enable
+
+service sensord /system/bin/sensord  
+    user system
+    group compass misc input
+    class core
+    oneshot
+
