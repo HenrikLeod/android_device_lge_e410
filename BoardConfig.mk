@@ -7,7 +7,6 @@ TARGET_BOOTLOADER_BOARD_NAME := e410
 BOARD_KERNEL_CMDLINE := androidboot.hardware=v1 lge.signed_image=false
 
 TARGET_KERNEL_CONFIG := cyanogenmod_v1_defconfig
-TARGET_PREBUILT_KERNEL := device/lge/e410/kernel
 
 BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE := e410
 
