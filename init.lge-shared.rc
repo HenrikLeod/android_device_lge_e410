@@ -12,16 +12,6 @@ on init
     mkdir /storage/sdcard1 0000 system system
     symlink /storage/sdcard0 /sdcard
 
-
-# NFC
-    chmod 0600 /dev/pn544
-    chown nfc nfc /dev/pn544
-    setprop ro.nfc.port I2C
-
-# Torch perms
-    chown system camera /sys/devices/platform/i2c-gpio.3/i2c-3/3-0030/brightness_uA
-    chmod 0660          /sys/devices/platform/i2c-gpio.3/i2c-3/3-0030/brightness_uA
-
 on emmc-fs
 # mount mmc partitions
     wait /dev/block/mmcblk0p14
@@ -118,7 +108,6 @@ on post-fs-data
     chown root log /data/dontpanic/last_kmsg
     chmod 0640 /data/dontpanic/last_kmsg
 
-# NFC
     # Create directories for wiper services
     mkdir /data/wpstiles/ 0755 shell
     mkdir /data/wiper 0755 location qcom_oncrpc
